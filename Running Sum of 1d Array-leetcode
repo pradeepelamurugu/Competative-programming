@@ -1,0 +1,21 @@
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        int i,j,ans=0,num=0;
+        vector<int> answer;
+        for(i=0;i<nums.size();++i){
+            // for(j=0;j<i;++j){
+            //     ans=ans+nums[j];
+            //     }
+            if(num<=i){
+                ans=ans+nums[i];
+                num++;
+                
+            }
+    answer.push_back(ans);   
+            
+        }
+        
+        return answer;
+    }
+};
