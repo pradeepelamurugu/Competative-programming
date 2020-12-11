@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int hammingDistance(int x, int y) {
+       int bitx,bity,count=0;
+        while(y>0 || x>0){
+        bitx=x%2;
+        bity=y%2;
+        if(bitx!=bity){
+            count++;
+        }
+        x=x/2;
+        y=y/2;}
+      return count;  
+    }
+};
