@@ -1,0 +1,29 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        unordered_map <int,int> ansSet;
+        int ans;
+        for(int i=0;i<nums.size();i++){
+            if(ansSet.find(nums[i])==ansSet.end()){
+
+                ansSet.insert(make_pair(nums[i], 1));
+              
+            }
+            else{
+             ansSet[nums[i]]++;
+            }
+           
+            
+        }
+   
+         for( const auto& n : ansSet ) {
+             if(n.second==1){
+        ans = n.first;  
+                 } 
+         }
+      
+        return ans;
+       
+        
+    }
+};
